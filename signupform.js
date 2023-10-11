@@ -17,18 +17,18 @@ function handleFormSubmission(event) {
         // Check if the entered email matches the saved email
         if (userLoginInfo.email === savedUserInfo.email) {
             // Display a popup alert for returning users
-            alert("You have already signed up for Marvel updates.");
+            $("#msg").text("You have already signed up for Marvel updates.");
         } else {
             // Save the new user login info to localStorage
             localStorage.setItem("userInfo", userInfoJSON);
             // Display a popup alert for first-time users
-            alert("Thank you for signing up for more Marvel updates!");
+            $("#msg").text("Thank you for signing up for more Marvel updates!");
         }
     } else {
         // Save the user login info to localStorage
         localStorage.setItem("userInfo", userInfoJSON);
         // Display a popup alert for first-time users
-        alert("Thank you for signing up for more Marvel updates!");
+        $("#msg").text("Thank you for signing up for more Marvel updates!");
     }
 }
 
